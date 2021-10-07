@@ -1,0 +1,30 @@
+name: Jukebox-Youtube
+main: uk.co.chisdealhd.JukeboxYT.Main
+version: 1.0
+depend: [MCJukebox]
+prefix: JukeboxYT
+description: >
+             Youtube addon for JukeboxAPI!
+commands:
+  youtube:
+    description: Rock and Rawl.
+  yt:
+    description: Rock and Rawl.
+  silence:
+    description: Stop all music.
+permissions:
+    JukeboxYT.*:
+        description: Give all the permissions.
+        children:
+            JukeboxYT.start: false
+            JukeboxYT.silence.self: true
+            JukeboxYT.silence.others: false
+    JukeboxYT.start:
+        description: Allows to play sum sweet Youtube music.
+        default: op
+    JukeboxYT.silence.self:
+        description: Gives permission to stop the music for themselves.
+        default: true
+    JukeboxYT.silence.others:
+        description: Stop the music for other players >:D
+        default: op
